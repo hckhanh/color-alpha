@@ -9,7 +9,7 @@ export default function alpha (color, value) {
 	if (value == null) value = obj.alpha;
 
 	//catch percent
-	if (obj.space[0] === 'h') {
+	if (obj.space?.[0] === 'h') {
 		return obj.space + ['a(', obj.values[0], ',', obj.values[1], '%,', obj.values[2], '%,', value, ')'].join('');
 	}
 
